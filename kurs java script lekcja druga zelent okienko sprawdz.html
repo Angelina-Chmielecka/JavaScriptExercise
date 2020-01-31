@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-<meta charset="utf-8"/>
-<title> sprawdz </title>
+  <head>
+    <meta charset="utf-8" />
+    <title>sprawdz</title>
 
-<script type="text/javascript">
-	function sprawdz() {		
-		var liczba = document.getElementById("pole").value;
-	
-		if (liczba>0) document.getElementById("wynik").innerHTML="dodatnia";
-		else if(liczba<0) document.getElementById("wynik").innerHTML="ujemna";
-		else if(liczba=="0") document.getElementById("wynik").innerHTML="zero";
-		else document.getElementById("wynik").innerHTML="Ekhmm, miała być liczba...";
-	}
+    <script type="text/javascript">
+      function sprawdz() {
+        var liczba = document.getElementById("pole").value;
 
-</script>
-</head>
-<body>
-	<input type="text" id="pole">
-	<input type="submit" value="Sprawdz" onclick="sprawdz()"/>
-	<div id="wynik"></div> 
-</body>
+        if (liczba > 0) document.getElementById("wynik").innerHTML = "dodatnia";
+        else if (liczba < 0)
+          document.getElementById("wynik").innerHTML = "ujemna";
+        else if (liczba == "0")
+          document.getElementById("wynik").innerHTML = "zero";
+        else
+          document.getElementById("wynik").innerHTML =
+            "Ekhmm, miała być liczba...";
+      }
+    </script>
+  </head>
+
+  <body>
+    <input type="text" id="pole" />
+    <input
+      type="submit"
+      value="Sprawdz czy liczba jest dodatnia"
+      onclick="sprawdz()"
+    />
+    <div id="wynik"></div>
+  </body>
 </html>
